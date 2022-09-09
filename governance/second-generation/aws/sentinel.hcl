@@ -23,7 +23,8 @@ policy "restrict-db-instance-engines" {
 }
 
 policy "restrict-ec2-instance-type" {
-    enforcement_level = "advisory"
+    source = "./restrict-ec2-instance-type.sentinel"
+    enforcement_level = "soft-mandatory"
 }
 
 policy "restrict-ingress-sg-rule-cidr-blocks" {
